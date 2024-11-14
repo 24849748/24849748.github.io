@@ -19,24 +19,22 @@
   <meta name="author" content="bosco">
   <meta name="keywords" content="BLE,单片机,嵌入式,C语言,Linux">
   
-    <meta name="description" content="Git 是软件开发中一个非常重要的工具，虽然现代编辑器大部分都集成了 Git 功能，但对于初学者，个人还是非常建议从命令行开始学习，这样对 Git 的理解会更加深刻。而且不必掌握所有操作，只要能够满足日常开发需求，后续在遇到问题时再从网上进行查阅即可。 概念理解 文件状态 未跟踪（untrack） 未修改（unmodified） 已修改（modified） 已暂存（staged）   工作区域 工">
+    <meta name="description" content="Mermaid 介绍 基于 Javascript 的绘图工具 Typora 支持渲染 Mermaid 语法 使用 markdown 代码块编写，并选择语言 mermaid，如果工具支持即可渲染  Mermaid 绘制流程图基本语法 id[description]id 就是一个节点，后面是此 id 的描述文本 通常只用 id，不想写 description    图表显示方向graph &lt;di">
 <meta property="og:type" content="article">
-<meta property="og:title" content="【Git】基础操作">
-<meta property="og:url" content="https://24849748.github.io/git/%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C/index.html">
+<meta property="og:title" content="mermaid 语法学习">
+<meta property="og:url" content="https://24849748.github.io/tools/Mermaid%E8%AF%AD%E6%B3%95%E5%AD%A6%E4%B9%A0/index.html">
 <meta property="og:site_name" content="bblog">
-<meta property="og:description" content="Git 是软件开发中一个非常重要的工具，虽然现代编辑器大部分都集成了 Git 功能，但对于初学者，个人还是非常建议从命令行开始学习，这样对 Git 的理解会更加深刻。而且不必掌握所有操作，只要能够满足日常开发需求，后续在遇到问题时再从网上进行查阅即可。 概念理解 文件状态 未跟踪（untrack） 未修改（unmodified） 已修改（modified） 已暂存（staged）   工作区域 工">
+<meta property="og:description" content="Mermaid 介绍 基于 Javascript 的绘图工具 Typora 支持渲染 Mermaid 语法 使用 markdown 代码块编写，并选择语言 mermaid，如果工具支持即可渲染  Mermaid 绘制流程图基本语法 id[description]id 就是一个节点，后面是此 id 的描述文本 通常只用 id，不想写 description    图表显示方向graph &lt;di">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://raw.githubusercontent.com/24849748/PicBed/main/ob/202306121639294.png">
-<meta property="article:published_time" content="2024-11-07T16:00:00.000Z">
-<meta property="article:modified_time" content="2024-11-09T14:21:53.666Z">
+<meta property="article:published_time" content="2024-04-28T15:55:32.000Z">
+<meta property="article:modified_time" content="2024-11-13T18:07:40.938Z">
 <meta property="article:author" content="bosco">
-<meta property="article:tag" content="Git">
+<meta property="article:tag" content="mermaid">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://raw.githubusercontent.com/24849748/PicBed/main/ob/202306121639294.png">
   
   
   
-  <title>【Git】基础操作 - bblog</title>
+  <title>mermaid 语法学习 - bblog</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -202,7 +200,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="【Git】基础操作"></span>
+            <span id="subtitle" data-typed-text="mermaid 语法学习"></span>
           
         </div>
 
@@ -213,8 +211,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2024-11-08 00:00" pubdate>
-          2024年11月8日 凌晨
+        <time datetime="2024-04-28 23:55" pubdate>
+          2024年4月28日 晚上
         </time>
       </span>
     
@@ -225,7 +223,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          1.2k 字
+          437 字
         
       </span>
     
@@ -236,7 +234,7 @@
         
         
         
-          10 分钟
+          4 分钟
         
       </span>
     
@@ -273,86 +271,102 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">【Git】基础操作</h1>
+            <h1 id="seo-header">mermaid 语法学习</h1>
             
             
               <div class="markdown-body">
                 
-                <p>Git 是软件开发中一个非常重要的工具，虽然现代编辑器大部分都集成了 Git 功能，但对于初学者，个人还是非常建议从命令行开始学习，这样对 Git 的理解会更加深刻。而且不必掌握所有操作，只要能够满足日常开发需求，后续在遇到问题时再从网上进行查阅即可。</p>
-<h2 id="概念理解"><a href="#概念理解" class="headerlink" title="概念理解"></a>概念理解</h2><ol>
-<li>文件状态<ul>
-<li>未跟踪（untrack）</li>
-<li>未修改（unmodified）</li>
-<li>已修改（modified）</li>
-<li>已暂存（staged）</li>
+                <h2 id="Mermaid-介绍"><a href="#Mermaid-介绍" class="headerlink" title="Mermaid 介绍"></a>Mermaid 介绍</h2><ul>
+<li>基于 Javascript 的绘图工具</li>
+<li>Typora 支持渲染 Mermaid 语法</li>
+<li>使用 markdown 代码块编写，并选择语言 <code>mermaid</code>，如果工具支持即可渲染</li>
 </ul>
-</li>
-<li>工作区域<ul>
-<li>工作区</li>
-<li>暂存区</li>
-<li>本地仓库</li>
-<li>远程仓库</li>
-</ul>
-</li>
-</ol>
-<p><img src="https://raw.githubusercontent.com/24849748/PicBed/main/ob/202306121639294.png" srcset="/img/loading.gif" lazyload alt="image.png|510"></p>
-<h2 id="最最基础的操作"><a href="#最最基础的操作" class="headerlink" title="最最基础的操作"></a>最最基础的操作</h2><p>这部分操作基本覆盖了个人开发日常 72.96% （有小数点可信）的需求</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 克隆别人的仓库</span><br>git <span class="hljs-built_in">clone</span> &lt;url&gt;<br><br><span class="hljs-comment"># 初始化一个 git 仓库</span><br>git init <br><span class="hljs-comment"># 初始化时顺便指定分支名</span><br>git init -b main<br><br><span class="hljs-comment"># 将文件添加到暂存区</span><br>git add &lt;file&gt;<br><br><span class="hljs-comment"># 将暂存区文件提交到本地仓库</span><br>git commit -m <span class="hljs-string">&quot;提交信息&quot;</span><br><br><span class="hljs-comment"># 添加远程仓库</span><br>git remote add origin &lt;url&gt;<br><span class="hljs-comment"># 查看远程仓库</span><br>git remote -v<br><br><span class="hljs-comment"># 将本地仓库推送到远程仓库</span><br>git push origin &lt;branch&gt;<br><br><span class="hljs-comment"># 拉取远程仓库</span><br>git pull origin &lt;branch&gt;<br></code></pre></td></tr></table></figure>
-
-<h2 id="常用操作"><a href="#常用操作" class="headerlink" title="常用操作"></a>常用操作</h2><h3 id="分支"><a href="#分支" class="headerlink" title="分支"></a>分支</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 查看所有分支</span><br>git branch -a<br><br><span class="hljs-comment"># 创建并切换分支</span><br>git checkout -b &lt;branch&gt;<br><br><span class="hljs-comment"># 切换已经存在的分支</span><br>git checkout &lt;branch&gt;<br><br><span class="hljs-comment"># 删除分支</span><br>git branch -d &lt;branch&gt;<br></code></pre></td></tr></table></figure>
-
-<h3 id="–amend"><a href="#–amend" class="headerlink" title="–amend"></a>–amend</h3><ol>
-<li>修改最近一次提交的信息</li>
-<li>对最近一次提交的内容进行修改，特别适合用于漏提交文件的场景</li>
-<li>最近一次提交已经在远程仓库的话，千万不能用</li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">git commit -m <span class="hljs-string">&quot;提交信息&quot;</span> --amend<br></code></pre></td></tr></table></figure>
-
-<h3 id="stash"><a href="#stash" class="headerlink" title="stash"></a>stash</h3><p><code>git push</code> 前如果有代码没有提交，会被打断的<br>我们可以使用 <code>stash</code> 来保存当前的改动，然后再 <code>push</code> 或 <code>pull</code>，操作完后再把改动恢复回来</p>
-<p>适用场景：</p>
-<ol>
-<li>写完部分代码，但有部分代码还不想提交</li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 放入暂存区</span><br>git stash<br><span class="hljs-comment"># 恢复之前暂存的改动</span><br>git stash pop<br><span class="hljs-comment"># 等同于 git stash</span><br>git stash push<br><span class="hljs-comment"># 指定某个文件，并添加 commit 信息</span><br>git stash push -m <span class="hljs-string">&quot;commit message&quot;</span> file1 file2<br><span class="hljs-comment"># 查看 stash 记录</span><br>git stash list<br><span class="hljs-comment"># 恢复某个 stash 并删除 stash 记录</span><br>git stash pop stash@&#123;0&#125;<br><span class="hljs-comment"># 恢复某个 stash，但不删除 stash 记录</span><br>git stash apply stash@&#123;0&#125;<br><span class="hljs-comment"># 删除某个 stash</span><br>git stash drop stash@&#123;0&#125;<br><span class="hljs-comment"># 删除所有 stash</span><br>git stash clear<br></code></pre></td></tr></table></figure>
-
-<p>举例：</p>
-<ul>
-<li>功能开发一半，改了一个 bug</li>
-<li>bug 比较重要需要先提交</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs bash">git commit bug <span class="hljs-comment"># commit bug</span><br>git stash <span class="hljs-comment"># 把其他内容暂存起来</span><br>git pull --rebase <span class="hljs-comment"># 以 rebase 方式拉取更新远程最新的代码</span><br>git push <span class="hljs-comment"># 上传 commit 的 bug</span><br>git stash pop <span class="hljs-comment"># 恢复之前暂存内容</span><br></code></pre></td></tr></table></figure>
-
-<blockquote>
-<p>PS：vscode 中的 stash 挺好用的，可以单独 stash 某个文件，结合 Git Graph 插件使用，可以指定对某个 stash pop&#x2F;apply&#x2F;drop</p>
+<h2 id="Mermaid-绘制流程图"><a href="#Mermaid-绘制流程图" class="headerlink" title="Mermaid 绘制流程图"></a>Mermaid 绘制流程图</h2><h3 id="基本语法"><a href="#基本语法" class="headerlink" title="基本语法"></a>基本语法</h3><ul>
+<li><code>id[description]</code><br>id 就是一个节点，后面是此 id 的描述文本<blockquote>
+<p>通常只用 id，不想写 description</p>
 </blockquote>
-<h3 id="tag"><a href="#tag" class="headerlink" title="tag"></a>tag</h3><p>软件开发离不开版本管理，使用 tag 可以方便标记版本，方便溯源</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs bash">git tag &lt;tag&gt; <span class="hljs-comment"># 在当前最新的提交记录上打 tag</span><br>git tag -a &lt;tag&gt; -m &lt;tag commit&gt; <span class="hljs-comment"># 打 tag 并添加 commit 说明</span><br><br>git tag -d &lt;tag&gt; <span class="hljs-comment"># 删除 tag</span><br><br>git push &lt;remote&gt; &lt;tag&gt;   <span class="hljs-comment"># 推送指定 tag 到远程仓库</span><br>git push origin --tags <span class="hljs-comment"># 推送所有 tag 到远程仓库</span><br>git push &lt;remote&gt; --delete &lt;tag&gt; <span class="hljs-comment"># 删除远程仓库某个 tag</span><br><br>git tag <span class="hljs-comment"># 查看当前仓库所有标签</span><br>git show &lt;tag&gt; <span class="hljs-comment"># 查看标签节点具体信息</span><br></code></pre></td></tr></table></figure>
-
-<h3 id="merge"><a href="#merge" class="headerlink" title="merge"></a>merge</h3><h3 id="rebase"><a href="#rebase" class="headerlink" title="rebase"></a>rebase</h3><h3 id="reset"><a href="#reset" class="headerlink" title="reset"></a>reset</h3><p><code>git reset</code> 操作会丢失 commit 信息，因此建议使用 <code>git revert</code> 替代。通常我会在以下场景使用到：</p>
-<ol>
-<li>提交到错误的分支</li>
-<li>提交了不需要提交的代码</li>
-<li>代码未推送到远程仓库</li>
-<li>仅需要撤回最近一两个 commit</li>
-<li>仓库只有自己在维护</li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs bash">git reset --soft HEAD^ <span class="hljs-comment"># 撤销最近一次提交，但保留工作区改动</span><br><br>git reset --hard HEAD^ <span class="hljs-comment"># 回退到上个版本。 </span><br>git reset --hard HEAD~n <span class="hljs-comment"># 回退到前 n 次提交之前，若 n=3，则可以回退到 3 次提交之前。 </span><br>git reset --hard commit_sha <span class="hljs-comment"># 回滚到指定 commit 的 sha 码，推荐使用这种方式。</span><br><br><span class="hljs-comment"># commit_sha 可以在远程仓库里、或者 git log 命令查看</span><br>git reset --hard 05ac0bfb2929d9cbwiener75e52ecb011950fb<br></code></pre></td></tr></table></figure>
-
-<p>reset 三个参数的区别：</p>
-<ul>
-<li>–soft：只撤销 <code>git commit</code>，不撤销 <code>git add</code>，不删除工作空间代码改动</li>
-<li>–hard：撤销 <code>git commit</code>、<code>git add</code>，删除工作空间代码改动，恢复到上一次 <code>git commit</code> 的状态</li>
-<li>–mixed：撤销 <code>git commit</code>、 <code>git add</code>，不删除工作空间代码改动，reset 默认参数</li>
+</li>
 </ul>
-<p>如果 <code>reset</code> 涉及到远程仓库修改（reset 后的记录与远程仓库不同步），在 <code>push</code> 时需要强制推送</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">git push origin --force<br></code></pre></td></tr></table></figure>
+<h4 id="图表显示方向"><a href="#图表显示方向" class="headerlink" title="图表显示方向"></a>图表显示方向</h4><p><code>graph &lt;dir&gt;</code></p>
+<ul>
+<li>TB (Top to Bottom)</li>
+<li>BT (Bottom to Top)</li>
+<li>LR (Left to Right)</li>
+<li>RL (Right to Left)</li>
+</ul>
+<h4 id="节点形状"><a href="#节点形状" class="headerlink" title="节点形状"></a>节点形状</h4><ul>
+<li>矩形：<code>[]</code></li>
+<li>长方形带圆角：<code>()</code></li>
+<li>长圆形：<code>([])</code></li>
+<li>圆形：<code>(())</code></li>
+<li>圆柱：<code>[()]</code></li>
+<li>菱形：<code>&#123;&#125;</code></li>
+<li>六角形：<code>&#123;&#123;&#125;&#125;</code></li>
+<li>平行四边形：<code>[/ /]</code> or <code>[\ \]</code></li>
+</ul>
+<blockquote>
+<p>如果文本里带 <code>()</code> 等符号，使用 <code>&quot;&quot;</code> 将文本包裹起来。</p>
+</blockquote>
+<h4 id="连线"><a href="#连线" class="headerlink" title="连线"></a>连线</h4><ul>
+<li>实线：<code>--</code></li>
+<li>虚线：<code>-.</code></li>
+<li>带箭头：<code>&gt;</code></li>
+<li>实线有描述：<code>--description--</code> or <code>--|description|</code></li>
+<li>加粗实线：<code>==</code></li>
+</ul>
+<h4 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h4><ul>
+<li>使用 <code>%%</code> 行注释</li>
+</ul>
+<h2 id="实战举例"><a href="#实战举例" class="headerlink" title="实战举例"></a>实战举例</h2><h3 id="单个节点连接多个节点"><a href="#单个节点连接多个节点" class="headerlink" title="单个节点连接多个节点"></a>单个节点连接多个节点</h3><pre><code class=" mermaid">graph LR
+    a --&gt; b &amp; c --&gt; d
+</code></pre>
 
-<h2 id="个人习惯"><a href="#个人习惯" class="headerlink" title="个人习惯"></a>个人习惯</h2><ol>
-<li>初始化的时候指定一个分支名</li>
-<li>每次提交之前先看一下远程仓库有没有更新，如果有更新先拉取，避免冲突</li>
-<li><code>push</code> 或 <code>pull</code> 一般不指定 <code>-u</code>，显式指定要操作的分支，可以避免一些失误</li>
-<li>现代编辑器已经有 <code>Git</code> 集成，常用操作一般在编辑器里完成、比如 <code>add</code>、<code>stash</code> 等</li>
-</ol>
+<h3 id="流程图"><a href="#流程图" class="headerlink" title="流程图"></a>流程图</h3><pre><code class=" mermaid">graph 
+	注册开始 --&gt; 发送广播帧
+	发送广播帧 --超时--&gt; 没回应 --&gt; 注册结束
+	发送广播帧 --&gt; 有回应
+	有回应 --没冲突--&gt; 设备表 --&gt; 分类完成
+	有回应 --有冲突--&gt; 冲突链表 --&gt; 分类完成
+	分类完成 --注册下一类型--&gt; 发送广播帧
+</code></pre>
+
+<h3 id="流程图嵌套"><a href="#流程图嵌套" class="headerlink" title="流程图嵌套"></a>流程图嵌套</h3><pre><code class=" mermaid">graph TB
+    c1--&gt;a2
+    subgraph one
+    a1--&gt;a2
+    end
+    subgraph two
+    b1--&gt;b2
+    end
+    subgraph three
+    c1--&gt;c2
+    end
+</code></pre>
+
+<h3 id="时序图"><a href="#时序图" class="headerlink" title="时序图"></a>时序图</h3><pre><code class=" mermaid">sequenceDiagram
+    键盘 --&gt;&gt; 键盘线程 : 发送重新注册请求
+    %%键盘线程 -&gt;&gt; + bus1 : 删除
+    键盘线程 -&gt;&gt; bus1 : 删除
+    loop 注册
+    键盘线程 -&gt;&gt; 键盘线程 : bus1、bus2 设备先后注册
+    end
+    %%bus1 -&gt;&gt; - 键盘线程 : 重新创建
+    键盘线程 -&gt;&gt; bus1  : 重新创建
+    键盘线程 --&gt;&gt; 键盘 : 发送已注册的设备信息
+</code></pre>
+
+<h3 id="状态图"><a href="#状态图" class="headerlink" title="状态图"></a>状态图</h3><pre><code class=" mermaid">stateDiagram
+[*] --&gt; 暂停
+    暂停 --&gt; 播放
+    暂停 --&gt; 停止
+    播放 --&gt; 暂停
+    播放 --&gt; 停止
+    停止 --&gt; [*] 
+</code></pre>
+
+<h2 id="参考连接"><a href="#参考连接" class="headerlink" title="参考连接"></a>参考连接</h2><blockquote>
+<p><a target="_blank" rel="noopener" href="https://snowdreams1006.github.io/write/mermaid-flow-chart.html">快速上手 mermadi 流程图</a></p>
+</blockquote>
 
                 
               </div>
@@ -371,7 +385,7 @@
     
       <span class="category-chain">
         
-  <a href="/categories/git/" class="category-chain-item">git</a>
+  <a href="/categories/tools/" class="category-chain-item">tools</a>
   
   
 
@@ -386,7 +400,7 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/Git/" class="print-no-link">#Git</a>
+        <a href="/tags/mermaid/" class="print-no-link">#mermaid</a>
       
     </div>
   
@@ -398,8 +412,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>【Git】基础操作</div>
-      <div>https://24849748.github.io/git/基础操作/</div>
+      <div>mermaid 语法学习</div>
+      <div>https://24849748.github.io/tools/Mermaid语法学习/</div>
     </div>
     <div class="license-meta">
       
@@ -411,7 +425,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2024年11月8日</div>
+          <div>2024年4月28日</div>
         </div>
       
       
@@ -443,21 +457,15 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/git/gitignore%E6%96%87%E4%BB%B6%E7%9A%84%E4%BD%BF%E7%94%A8/" title="【Git】.gitignore 文件的使用">
+                      <a href="/code/Python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" title="Python学习笔记">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">【Git】.gitignore 文件的使用</span>
+                        <span class="hidden-mobile">Python学习笔记</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
                   </article>
                   <article class="post-next col-6">
                     
-                    
-                      <a href="/git/%E5%AD%90%E6%A8%A1%E5%9D%97%E7%9A%84%E4%BD%BF%E7%94%A8/" title="【Git】子模块 submodule 的使用">
-                        <span class="hidden-mobile">【Git】子模块 submodule 的使用</span>
-                        <span class="visible-mobile">下一篇</span>
-                        <i class="iconfont icon-arrowright"></i>
-                      </a>
                     
                   </article>
                 </div>

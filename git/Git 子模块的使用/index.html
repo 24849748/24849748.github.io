@@ -19,22 +19,22 @@
   <meta name="author" content="bosco">
   <meta name="keywords" content="BLE,单片机,嵌入式,C语言,Linux">
   
-    <meta name="description" content="一开始创建仓库没考虑很多，随着开发提交越来越多 希望将目录独立出来，保留该目录在原仓库的所有提交记录 作为原仓库的子仓库管理  12# 1.在原仓库下提取要分离子文件夹的所有提交记录git subtree split -P [subdir] -b [branch-temp]  123456# 2.原仓库外创建一个新的文件夹，并初始化为 git 仓库mkdir [subdir]git init#">
+    <meta name="description" content="子模块是 git 仓库中的仓库，在一些大型工程中比较常见。对于 git 来说，子模块仅是主仓库管理的一个指向子仓库某个提交的指针。虽然在物理层面上来说子模块的代码、文件都在主仓库里，但子模块的 git 管理是独立的。 拉取子模块123456# clone 时拉取git clone --recursive &lt;url&gt;# clone 后拉取git submodule initgit sub">
 <meta property="og:type" content="article">
-<meta property="og:title" content="【Git】将子文件夹独立为子模块">
-<meta property="og:url" content="https://24849748.github.io/git/%E5%AD%90%E6%96%87%E4%BB%B6%E5%A4%B9%E5%88%86%E7%A6%BB/index.html">
+<meta property="og:title" content="【Git】子模块 submodule 的使用">
+<meta property="og:url" content="https://24849748.github.io/git/Git%20%E5%AD%90%E6%A8%A1%E5%9D%97%E7%9A%84%E4%BD%BF%E7%94%A8/index.html">
 <meta property="og:site_name" content="bblog">
-<meta property="og:description" content="一开始创建仓库没考虑很多，随着开发提交越来越多 希望将目录独立出来，保留该目录在原仓库的所有提交记录 作为原仓库的子仓库管理  12# 1.在原仓库下提取要分离子文件夹的所有提交记录git subtree split -P [subdir] -b [branch-temp]  123456# 2.原仓库外创建一个新的文件夹，并初始化为 git 仓库mkdir [subdir]git init#">
+<meta property="og:description" content="子模块是 git 仓库中的仓库，在一些大型工程中比较常见。对于 git 来说，子模块仅是主仓库管理的一个指向子仓库某个提交的指针。虽然在物理层面上来说子模块的代码、文件都在主仓库里，但子模块的 git 管理是独立的。 拉取子模块123456# clone 时拉取git clone --recursive &lt;url&gt;# clone 后拉取git submodule initgit sub">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2024-11-07T18:29:42.008Z">
-<meta property="article:modified_time" content="2024-11-13T08:41:51.302Z">
+<meta property="article:published_time" content="2024-11-07T16:00:00.000Z">
+<meta property="article:modified_time" content="2024-11-13T08:41:49.561Z">
 <meta property="article:author" content="bosco">
 <meta property="article:tag" content="Git">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>【Git】将子文件夹独立为子模块 - bblog</title>
+  <title>【Git】子模块 submodule 的使用 - bblog</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -200,7 +200,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="【Git】将子文件夹独立为子模块"></span>
+            <span id="subtitle" data-typed-text="【Git】子模块 submodule 的使用"></span>
           
         </div>
 
@@ -211,7 +211,7 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2024-11-08 02:29" pubdate>
+        <time datetime="2024-11-08 00:00" pubdate>
           2024年11月8日 凌晨
         </time>
       </span>
@@ -223,7 +223,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          230 字
+          541 字
         
       </span>
     
@@ -234,7 +234,7 @@
         
         
         
-          2 分钟
+          5 分钟
         
       </span>
     
@@ -271,27 +271,41 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">【Git】将子文件夹独立为子模块</h1>
+            <h1 id="seo-header">【Git】子模块 submodule 的使用</h1>
             
             
               <div class="markdown-body">
                 
-                <ul>
-<li>一开始创建仓库没考虑很多，随着开发提交越来越多</li>
-<li>希望将目录独立出来，保留该目录在原仓库的所有提交记录</li>
-<li>作为原仓库的子仓库管理</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 1.在原仓库下提取要分离子文件夹的所有提交记录</span><br>git subtree <span class="hljs-built_in">split</span> -P [subdir] -b [branch-temp]<br></code></pre></td></tr></table></figure>
+                <p>子模块是 git 仓库中的仓库，在一些大型工程中比较常见。<br>对于 git 来说，子模块仅是主仓库管理的一个指向子仓库某个提交的指针。<br>虽然在物理层面上来说子模块的代码、文件都在主仓库里，但子模块的 git 管理是独立的。</p>
+<h2 id="拉取子模块"><a href="#拉取子模块" class="headerlink" title="拉取子模块"></a>拉取子模块</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># clone 时拉取</span><br>git <span class="hljs-built_in">clone</span> --recursive &lt;url&gt;<br><br><span class="hljs-comment"># clone 后拉取</span><br>git submodule init<br>git submodule update<br></code></pre></td></tr></table></figure>
 
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 2.原仓库外创建一个新的文件夹，并初始化为 git 仓库</span><br><span class="hljs-built_in">mkdir</span> [subdir]<br>git init<br><br><span class="hljs-comment"># 将原仓库的 [branch-temp] 分支拉取到新仓库</span><br>git pull [原仓库地址] [branch-temp]<br></code></pre></td></tr></table></figure>
+<p>对于上面两种方式，都会将主仓库下的所有子模块都拉取下来</p>
+<p>如果只想拉取某个子模块，可以指定子模块的名称</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># clone 完之后，首次更新子仓库，后续更新可以无需 --init</span><br>git submodule update --init [sub_repo_name]<br></code></pre></td></tr></table></figure>
 
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 3.移除原仓库 [subdir] 目录及其提交记录</span><br>git <span class="hljs-built_in">rm</span> -rf [subdir]<br>git commit -m <span class="hljs-string">&#x27;Remove some fxxking shit&#x27;</span><br><br><span class="hljs-comment"># 4.移除 1 分离出来的临时分支</span><br>git branch -D [branch-temp]<br><br><span class="hljs-comment"># 5.作为子模块与原仓库关联</span><br>git submodule add [新仓库地址] [subdir]<br></code></pre></td></tr></table></figure>
+<h2 id="子模块的修改和更新"><a href="#子模块的修改和更新" class="headerlink" title="子模块的修改和更新"></a>子模块的修改和更新</h2><p>这里应该分两种情况讨论：</p>
+<ol>
+<li>子模块是自己修改的</li>
+<li>子模块是他人修改的</li>
+</ol>
+<p>对于第一种情况：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 对子仓库代码进行提交推送</span><br>git add<br>git commit<br>git push<br><span class="hljs-comment"># 切换到主仓库，可以看到主仓库的子模块版本信息已经更新</span><br><span class="hljs-comment"># 我们需要更新主仓库引用该子模块的 commit id，这样当别人使用主仓库时，才会拉取到我们修改后的子模块代码</span><br>git add [submodule_name]<br>git commit<br></code></pre></td></tr></table></figure>
 
-<p>注意备份, 原来 .gitignore 忽略了的文件需要重新添加</p>
-<blockquote>
-<p>参考链接：<br><a target="_blank" rel="noopener" href="https://prinsss.github.io/splitting-a-subfolder-out-into-a-new-git-repository/">https://prinsss.github.io/splitting-a-subfolder-out-into-a-new-git-repository/</a></p>
-</blockquote>
+<p>对于第二种情况：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 更新子模块代码，git 会自动根据子模块版本信息更新所有子模块目录相关代码</span><br>git submodule update<br><span class="hljs-comment"># 也可以切换到子模块目录下，使用 git pull 更新子模块代码</span><br><span class="hljs-built_in">cd</span> [submodule_name]<br>git pull<br><br><span class="hljs-comment"># 同时，由于他人也更新了主仓库的子模块版本信息，我们需要更新主仓库的最新提交</span><br>git pull<br></code></pre></td></tr></table></figure>
 
+<h2 id="创建-submodule"><a href="#创建-submodule" class="headerlink" title="创建 submodule"></a>创建 submodule</h2><p>比如需要将子模块 <code>submodule</code> 添加到主仓库 <code>main</code> 中</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">git submodule add &lt;submodule_url&gt; [子模块在主仓库中的路径]<br></code></pre></td></tr></table></figure>
+
+<p>此时 git 仓库会多出：</p>
+<ol>
+<li><code>.gitmodules</code></li>
+<li><code>.git/config</code> 的一些信息</li>
+<li><code>.git/modules</code></li>
+</ol>
+<h2 id="删除子模块"><a href="#删除子模块" class="headerlink" title="删除子模块"></a>删除子模块</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 移除 .git/config 中的子模块信息，如果子模块本地有修改，加 --force</span><br>git submodule deinit [submodule_name]<br><span class="hljs-comment"># 移除 .gitmodule 相关内容</span><br>git <span class="hljs-built_in">rm</span> [submodule_name]<br><span class="hljs-comment"># 移除 .git/modules 残余信息</span><br>git commit -m <span class="hljs-string">&quot;rm submodule&quot;</span><br></code></pre></td></tr></table></figure>
+
+<h3 id="更换子模块-url"><a href="#更换子模块-url" class="headerlink" title="更换子模块 url"></a>更换子模块 url</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 1. 直接修改 .gitmodule 文件中的 url 链接</span><br><span class="hljs-comment"># 2. 更新</span><br>git submodule <span class="hljs-built_in">sync</span><br><span class="hljs-comment"># 3. 初始化子模块</span><br>git submodule init<br><span class="hljs-comment"># 4. 更新</span><br>git submodule update<br></code></pre></td></tr></table></figure>
                 
               </div>
             
@@ -336,8 +350,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>【Git】将子文件夹独立为子模块</div>
-      <div>https://24849748.github.io/git/子文件夹分离/</div>
+      <div>【Git】子模块 submodule 的使用</div>
+      <div>https://24849748.github.io/git/Git 子模块的使用/</div>
     </div>
     <div class="license-meta">
       
@@ -381,9 +395,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/linux/D1-%E8%BF%9B%E7%A8%8B/" title="【linux 学习笔记】进程">
+                      <a href="/git/Git%20ignore%E6%96%87%E4%BB%B6%E7%9A%84%E4%BD%BF%E7%94%A8/" title="【Git】.gitignore 文件的使用">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">【linux 学习笔记】进程</span>
+                        <span class="hidden-mobile">【Git】.gitignore 文件的使用</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -391,8 +405,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/git/gitignore%E6%96%87%E4%BB%B6%E7%9A%84%E4%BD%BF%E7%94%A8/" title="【Git】.gitignore 文件的使用">
-                        <span class="hidden-mobile">【Git】.gitignore 文件的使用</span>
+                      <a href="/ble/BLE%E4%B8%AD%E5%90%84%E7%A7%8D%E8%A7%92%E8%89%B2%E6%A6%82%E5%BF%B5/" title="BLE 中各种角色概念">
+                        <span class="hidden-mobile">BLE 中各种角色概念</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
